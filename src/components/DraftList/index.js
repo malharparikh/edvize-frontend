@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Collapse, Card, Tag, Typography, Modal, Button } from 'antd';
+import { Collapse, Card, Tag, Typography, Modal } from 'antd';
 import './DraftList.css'; // Create this CSS file to style DraftList
 
 const { Panel } = Collapse;
