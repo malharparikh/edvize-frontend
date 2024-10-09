@@ -1,0 +1,433 @@
+
+
+.error-section {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+  padding: 10px;
+}
+
+.error-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.error-title {
+  flex-grow: 1;
+  font-weight: bold;
+  color: #333;
+}
+
+.error-icon {
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+
+.error-list {
+  padding: 10px;
+}
+
+.error-item {
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.error-item:last-child {
+  border-bottom: none;
+}
+
+.no-errors {
+  padding: 10px;
+  text-align: center;
+  color: #888;
+}
+
+.correction, .suggestion, .position {
+  display: block;
+  font-size: 0.85em;
+  color: #555;
+}
+
+.error-section:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.error-section .ant-card-body {
+  padding: 0;
+} 
+
+
+.content {
+  width: 100%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.ant-card.ant-card-bordered.error-section {
+  border: none;
+}
+
+.back-arrow {
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  left: 16px;
+  top: 16px;
+}
+
+.frosted-layout {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.save-draft-button-container{
+  margin-left: 15px;
+}
+
+/* .text-analyzer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: none;
+}
+
+
+.content-layout {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1400px;
+  position: relative;
+  gap: 20px;
+} */
+
+
+/* .left-section {
+  position: absolute;
+  left: -140px; 
+  padding: 20px;
+  max-width: 300px;
+  width: 100%;
+} */
+/* Main container for the text analyzer */
+.text-analyzer-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the top */
+  height: 100vh;
+  background: none;
+}
+
+/* Content layout adjustments */
+.content-layout {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1400px;
+  position: relative;
+  gap: 20px;
+}
+
+/* Left section styling */
+.left-section {
+  position: relative; /* Change to relative for better control */
+  /* padding: 0 20px Add padding on the left and right */
+  width: 570px; /* Set fixed width */
+  margin-top: 20px; /* Space from the header */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  overflow-y: scroll;
+}
+
+/* DraftList specific styles */
+.draft-list-wrapper {
+  /* flex-grow: 1; Allow this section to grow and take remaining space */
+  max-height: calc(100vh - 80px); /* Adjust based on header and SchoolInfo height */
+  overflow-y: auto; /* Ensure it can scroll if there are many drafts */
+  padding: 10px 0; /* Add padding for aesthetics */
+  /* background-color: rgba(255, 255, 255, 0.8);  */
+  border-radius: 10px; /* Optional: Rounded corners for aesthetics */
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  */
+  width: 350px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .left-section {
+    width: 250px; /* Reduce width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .left-section {
+    width: 200px; /* Further reduce width for very small screens */
+  }
+}
+
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column; /* Stack SchoolInfo and DraftList vertically */
+  /*height: 100%;  Take full height of the parent */
+}
+
+.school-info-wrapper {
+  margin-bottom: 20px; /* Add space between SchoolInfo and DraftList */
+  flex-shrink: 0; /* Prevent SchoolInfo from shrinking */
+}
+
+
+/* Add some styling for individual drafts if needed */
+.draft-item {
+  padding: 10px; /* Spacing for each draft item */
+  border-bottom: 1px solid #ddd; /* Divider between draft items */
+}
+
+.draft-item:last-child {
+  border-bottom: none; /* Remove border from the last item */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .left-section {
+    width: 250px; /* Reduce width for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .left-section {
+    width: 200px; /* Further reduce width for very small screens */
+  }
+}
+
+
+.school-info-section {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* .form-container {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  height: fit-content;
+} */
+
+.input-field,
+.textarea-field {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  height: 250px; 
+  font-size: 16px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  resize: vertical; 
+}
+
+.word-count {
+  margin-top: 10px;
+  display: block;
+  text-align: right;
+  color: #666;
+}
+
+.submit-button {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .content-layout {
+    flex-direction: column;
+  }
+
+  .left-section {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .right-section {
+    max-width: 100%;
+  }
+
+  .form-container {
+    max-width: 100%;
+    padding: 20px;
+  }
+} 
+
+
+
+
+.analyzed-view .form-section {
+  flex: 1;
+  transition: all 0.3s ease;
+}
+
+
+.school-info-section {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.5s ease-in-out;
+  overflow-y: auto;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.form-section {
+  padding-top: 20px;
+  width: 100%;
+  margin-left: 40px;
+  transition: all 0.3s ease;
+}
+
+.form-section-center{
+  padding-top: 20px;
+  width: 100%;
+  margin-left: 40px;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+}
+
+.form-expanded {
+  padding-left: 0;
+}
+
+/* .form-container {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  height: fit-content;
+} */
+
+.form-container {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  padding: 20px; /* Reduce padding for better spacing */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  height: fit-content;
+}
+
+.input-field,
+.textarea-field {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  height: 250px;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  resize: vertical;
+}
+
+.word-count {
+  margin-top: 10px;
+  display: block;
+  text-align: right;
+  color: #666;
+}
+
+.submit-button {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .content-layout {
+    flex-direction: column;
+  }
+
+  .left-section {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .right-section {
+    max-width: 100%;
+  }
+
+  .form-container {
+    max-width: 100%;
+    padding: 20px;
+  }
+}
+
+.fixed-buttons-container {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.report-issue-button,
+.contact-live-chat-button {
+  width: 160px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.report-issue-button {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.contact-live-chat-button {
+  background-color: #1abc9c;
+  color: white;
+}
