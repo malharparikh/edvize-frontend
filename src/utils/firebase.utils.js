@@ -17,11 +17,11 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-
+console.log(analytics)
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);// Initialize Firebase Auth provider
 const provider = new GoogleAuthProvider();
-  
+console.log(firebaseApp)  
 // whenever a user interacts with the provider, we force them to select an account
 provider.setCustomParameters({   
     prompt : "select_account "
